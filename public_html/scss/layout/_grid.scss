@@ -9,7 +9,7 @@
         @for $i from 1 through $numColumns{
             .col-#{$nombre}-#{$i}{
                 float: left;
-                width: ((100/$numColumns)*$i)*1%;
+                margin: ((100/$numColumns)*$i)*1%;
             } 
             
             .offset-#{$nombre}-#{$i}{
