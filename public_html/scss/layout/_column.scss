@@ -1,0 +1,20 @@
+.row:after{
+    clear: both;
+    content: "";
+    display: block;
+}
+
+@each $nombre, $tamanyo in $sizeColumns{
+    @media (min-width: $tamanyo){
+        @for $i from 1 through $nunColumns{
+            .col-#{$nombre}-#{$i}{
+                float: left;
+                width: ((100/$nunColumns)*$i)*1%;
+            }
+            
+            .offset-#{$nombre}-#{$i}{
+                margin-left: ((100/$nunColumns)*$i)*1%;
+            }
+        } 
+    }
+}

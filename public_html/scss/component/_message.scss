@@ -1,0 +1,15 @@
+.message{
+    color: white;
+    background-color: grey;
+    border: 1px solid darken(grey,20%);
+    padding: 10px;
+    border-radius: 2px;
+}
+
+@each $function, $color in $functional-variations{
+    .message--#{$function}{
+        background-color: $color;
+        color: darken($color,20%);
+        border: 1px solid darken($color,20%);
+    }
+}
